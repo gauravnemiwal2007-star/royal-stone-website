@@ -17,10 +17,12 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: black;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
     padding: 15px 0;
     z-index: 1000;
 }
+
 
 nav ul {
     list-style: none;
@@ -164,4 +166,78 @@ section {
         grid-template-columns: 1fr;
     }
 
+}
+/* Fade In Animation */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header, .gallery, .contact, #about {
+    animation: fadeInUp 1s ease forwards;
+}
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+header h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+.services {
+    padding: 60px 20px;
+    background: rgba(0,0,0,0.75);
+}
+
+.services h2 {
+    margin-bottom: 40px;
+}
+
+.service-box {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
 }
