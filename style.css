@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial;
@@ -239,5 +243,27 @@ header p {
 }
 
 .whatsapp-float:hover {
+    transform: scale(1.1);
+}
+.gallery {
+    padding: 50px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 250px;
+    border-radius: 10px;
+}
+button {
+    transition: 0.3s;
+}
+
+button:hover {
     transform: scale(1.1);
 }
